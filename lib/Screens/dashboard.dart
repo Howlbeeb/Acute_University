@@ -1,3 +1,4 @@
+import 'package:acute_university/widgets/alumni_Box.dart';
 import "package:flutter/material.dart";
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -115,6 +116,9 @@ class _DashboardPageState extends State<DashboardPage> {
                       decoration: BoxDecoration(),
                       child: OutlinedButton(
                         style: OutlinedButton.styleFrom(
+                          padding: EdgeInsets.symmetric(
+                            vertical: 0,
+                          ),
                           primary: Color(0xFF00256F),
                           side: BorderSide(
                             color: Color(0xFF00256F),
@@ -122,7 +126,7 @@ class _DashboardPageState extends State<DashboardPage> {
                         ),
                         onPressed: () {},
                         child: Text(
-                          'See all',
+                           'See all',
                           style: TextStyle(
                               fontSize: 10, fontWeight: FontWeight.w400),
                         ),
@@ -132,19 +136,23 @@ class _DashboardPageState extends State<DashboardPage> {
                 ),
                 SizedBox(
                   height: 23,
+
                 ),
-                Row(
-                  children: [
-                    Alumnibox(),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Alumnibox(),
-                    SizedBox(width: 10),
-                    Alumnibox(),
-                    SizedBox(width: 10),
-                    Alumnibox()
-                  ],
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      Alumnibox(),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Alumnibox(),
+                      SizedBox(width: 10),
+                      Alumnibox(),
+                      SizedBox(width: 10),
+                      Alumnibox()
+                    ],
+                  ),
                 ),
                 SizedBox(
                   height: 24,
@@ -164,6 +172,9 @@ class _DashboardPageState extends State<DashboardPage> {
                       height: 21,
                       child: OutlinedButton(
                         style: OutlinedButton.styleFrom(
+                            padding: EdgeInsets.symmetric(
+                              vertical: 0,
+                            ),
                             primary: Color(0xFF00256F),
                             side: BorderSide(color: Color(0xFF00256F))),
                         onPressed: () {},
@@ -179,35 +190,180 @@ class _DashboardPageState extends State<DashboardPage> {
                     ),
                   ],
                 ),
-                Row(
-                  children: <Widget>[
-                    Container(
-                      width: 133,
-                      height: 157,
-                      decoration: BoxDecoration(
-                        color: Color(0xFFFFFFFF),
-                        borderRadius: BorderRadius.all(Radius.circular(10)),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Color(0xffDDDDDD),
-                            blurRadius: 6.0,
-                            spreadRadius: 2.0,
-                            offset: Offset(0.0, 0.0),
-                          )
-                        ],
-                      ),
-                      child: Row(
-                        children: [
-                          CircleAvatar(
-                            backgroundColor: Color(0xff004ADD),
-                            radius: 34,
-                            child: SvgPicture.asset(
-                                'assets/icons/linear/backward.svg',color: Color(0xffff0099),),
+                SizedBox(
+                  height: 17.4,
+
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: <Widget>[
+                      Container(
+                        width: 133,
+                        height: 157,
+                        decoration: BoxDecoration(
+                          color: Color(0xFFFFFFFF),
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Color(0xffDDDDDD),
+                              blurRadius: 6.0,
+                              spreadRadius: 2.0,
+                              offset: Offset(0.0, 0.0),
+                            )
+                          ],
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            IconButton(
+                            icon: SvgPicture.asset(
+                              'assets/icons/eye-slash.svg',
+                              width: 10,
+                              height: 10,
+                              color: Colors.red,
+                            ),
+                            onPressed: () {
+                            },
                           ),
-                        ],
+                            Center(
+                              child: CircleAvatar(
+                                backgroundColor: Color(0xff004ADD),
+                                radius: 34,
+                                child: SvgPicture.asset(
+                                  'assets/icons/icons/backward.svg',
+                                  color: Color(0xffff0099),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ), SizedBox(width: 11),
+                      Container(
+                        width: 133,
+                        height: 157,
+                        decoration: BoxDecoration(
+                          color: Color(0xFFFFFFFF),
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Color(0xffDDDDDD),
+                              blurRadius: 6.0,
+                              spreadRadius: 2.0,
+                              offset: Offset(0.0, 0.0),
+                            )
+                          ],
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            IconButton(
+                              icon: SvgPicture.asset(
+                                'assets/icons/eye-slash.svg',
+                                width: 10,
+                                height: 10,
+                                color: Colors.red,
+                              ),
+                              onPressed: () {
+                              },
+                            ),
+                            Center(
+                              child: CircleAvatar(
+                                backgroundColor: Color(0xff004ADD),
+                                radius: 34,
+                                child: SvgPicture.asset(
+                                  'assets/icons/icons/backward.svg',
+                                  color: Color(0xffff0099),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ), SizedBox(width: 11),
+                      Container(
+                        width: 133,
+                        height: 157,
+                        decoration: BoxDecoration(
+                          color: Color(0xFFFFFFFF),
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Color(0xffDDDDDD),
+                              blurRadius: 6.0,
+                              spreadRadius: 2.0,
+                              offset: Offset(0.0, 0.0),
+                            )
+                          ],
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            IconButton(
+                              icon: SvgPicture.asset(
+                                'assets/icons/eye-slash.svg',
+                                width: 10,
+                                height: 10,
+                                color: Colors.red,
+                              ),
+                              onPressed: () {
+                              },
+                            ),
+                            Center(
+                              child: CircleAvatar(
+                                backgroundColor: Color(0xff004ADD),
+                                radius: 34,
+                                child: SvgPicture.asset(
+                                  'assets/icons/icons/backward.svg',
+                                  color: Color(0xffff0099),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ), SizedBox(width: 11),
+                      Container(
+                        width: 133,
+                        height: 157,
+                        decoration: BoxDecoration(
+                          color: Color(0xFFFFFFFF),
+                          borderRadius: BorderRadius.all(Radius.circular(10)),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Color(0xffDDDDDD),
+                              blurRadius: 6.0,
+                              spreadRadius: 2.0,
+                              offset: Offset(0.0, 0.0),
+                            )
+                          ],
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            IconButton(
+                              icon: SvgPicture.asset(
+                                'assets/icons/eye-slash.svg',
+                                width: 10,
+                                height: 10,
+                                color: Colors.red,
+                              ),
+                              onPressed: () {
+                              },
+                            ),
+                            Center(
+                              child: CircleAvatar(
+                                backgroundColor: Color(0xff004ADD),
+                                radius: 34,
+                                child: SvgPicture.asset(
+                                  'assets/icons/icons/backward.svg',
+                                  color: Color(0xffff0099),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 )
               ],
             ),
@@ -216,50 +372,6 @@ class _DashboardPageState extends State<DashboardPage> {
       ),
       bottomNavigationBar: Row(
         children: [Icon(Icons.home)],
-      ),
-    );
-  }
-}
-
-class Alumnibox extends StatelessWidget {
-  const Alumnibox({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10.79),
-        color: Color(0xFFCCDBF8),
-      ),
-      width: 83,
-      height: 85,
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Image(
-              image: AssetImage('images/logo1.png'),
-              width: 21.64,
-              height: 18.02,
-            ),
-            SizedBox(
-              height: 5,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 17),
-              child: Text(
-                "Alumni Album",
-                style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 14.03,
-                  color: Color(0xFF004ADD),
-                ),
-              ),
-            )
-          ],
-        ),
       ),
     );
   }

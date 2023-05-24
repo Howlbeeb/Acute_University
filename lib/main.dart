@@ -15,6 +15,7 @@ class AcuteUniversity extends StatelessWidget {
       scaffoldBackgroundColor:Colors.white,
 
     ),
+    debugShowCheckedModeBanner: false,
     home: LoginPage(),);
   }
 }
